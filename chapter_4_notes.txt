@@ -358,9 +358,46 @@ Untracked files:
         node_modules/
         package-lock.json
 
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git add chapter_4_notes.txt    <====
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   chapter_4_notes.txt     <====
+        new file:   express-server.js
+        new file:   package.json
+        new file:   server.js
+        new file:   static.js
+        new file:   static/favicon.ico
+        new file:   static/index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .idea/
+        node_modules/
+        package-lock.json
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git commit
+[master (root-commit) 72742a0] Initial commit Changes to be committed:  new file:   chapter_4_notes.txt         new file:   express-server.js   new f
+ile:   package.json     new file:   server.js   new file:   static.js   new file:   static/favicon.ico  new file:   static/index.html Untracked files
+:       .gitignore      .idea/  node_modules/   package-lock.json
+ 7 files changed, 496 insertions(+)
+ create mode 100644 chapter_4_notes.txt
+ create mode 100644 express-server.js
+ create mode 100644 package.json
+ create mode 100644 server.js
+ create mode 100644 static.js
+ create mode 100644 static/favicon.ico
+ create mode 100644 static/index.html
+
 C:\Users\John\Desktop\WorkingFiles\Chapter 4>
-
-
 
 
 
