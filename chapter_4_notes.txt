@@ -1,0 +1,414 @@
+# ***** generate package.json ****
+
+C:\Users\John>cd "C:\Users\John\Desktop\WorkingFiles\Chapter 4"
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (getting-started)
+version: (1.0.0)
+description:
+git repository:
+keywords:
+author: John Canessa
+license: (MIT)
+About to write to C:\Users\John\Desktop\WorkingFiles\Chapter 4\package.json:
+
+{
+  "name": "getting-started",
+  "version": "1.0.0",
+  "main": "express-server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-favicon": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "John Canessa",
+  "license": "MIT",
+  "description": ""
+}
+
+Is this OK? (yes)
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>dir
+10/09/2018  08:02 AM    <DIR>          .
+10/09/2018  08:02 AM    <DIR>          ..
+10/09/2018  08:07 AM    <DIR>          .idea
+10/09/2018  08:09 AM               186 chapter_4_notes.txt
+10/09/2018  08:02 AM               602 express-server.js
+10/08/2018  12:15 PM    <DIR>          node_modules
+10/08/2018  12:15 PM            13,753 package-lock.json
+10/09/2018  08:11 AM               371 package.json     <====
+10/08/2018  11:22 AM               457 server.js
+10/08/2018  12:17 PM    <DIR>          static
+02/08/2016  02:41 PM               618 static.js
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+# **** semver ****
+https://docs.npmjs.com/
+https://docs.npmjs.com/misc/semver
+
+Allows changes that do not modify the left-most non-zero digit in the 
+[major, minor, patch] tuple. 
+In other words, this allows patch and minor updates for versions 1.0.0 and above, 
+patch updates for versions 0.X >=0.1.0, and no updates for versions 0.0.X.
+
+Many authors treat a 0.x version as if the x were the major "breaking-change" indicator.
+
+# **** ****
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>dir
+10/09/2018  08:02 AM    <DIR>          .
+10/09/2018  08:02 AM    <DIR>          ..
+10/09/2018  08:18 AM    <DIR>          .idea
+10/09/2018  08:26 AM             2,324 chapter_4_notes.txt
+10/09/2018  08:02 AM               602 express-server.js
+10/08/2018  12:15 PM    <DIR>          node_modules     <====
+10/08/2018  12:15 PM            13,753 package-lock.json
+10/09/2018  08:11 AM               371 package.json
+10/08/2018  11:22 AM               457 server.js
+10/08/2018  12:17 PM    <DIR>          static
+02/08/2016  02:41 PM               618 static.js
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4\node_modules>help rmdir
+Removes (deletes) a directory.
+
+RMDIR [/S] [/Q] [drive:]path
+RD [/S] [/Q] [drive:]path
+
+    /S      Removes all directories and files in the specified directory
+            in addition to the directory itself.  Used to remove a directory
+            tree.
+
+    /Q      Quiet mode, do not ask if ok to remove a directory tree with /S
+
+    
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>rmdir /S /Q node_modules   <====
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>dir
+10/09/2018  08:42 AM    <DIR>          .
+10/09/2018  08:42 AM    <DIR>          ..
+10/09/2018  08:18 AM    <DIR>          .idea
+10/09/2018  08:26 AM             2,324 chapter_4_notes.txt
+10/09/2018  08:02 AM               602 express-server.js
+10/08/2018  12:15 PM            13,753 package-lock.json
+10/09/2018  08:11 AM               371 package.json
+10/08/2018  11:22 AM               457 server.js
+10/08/2018  12:17 PM    <DIR>          static
+02/08/2016  02:41 PM               618 static.js
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>type package.json
+{
+  "name": "getting-started",
+  "version": "1.0.0",
+  "main": "express-server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-favicon": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "John Canessa",
+  "license": "MIT",
+  "description": ""
+}
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>npm install
+npm WARN getting-started@1.0.0 No description
+npm WARN getting-started@1.0.0 No repository field.
+
+added 51 packages from 48 contributors and audited 239 packages in 7.368s
+found 0 vulnerabilities
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>dir
+10/09/2018  08:47 AM    <DIR>          .
+10/09/2018  08:47 AM    <DIR>          ..
+10/09/2018  08:18 AM    <DIR>          .idea
+10/09/2018  08:48 AM             4,960 chapter_4_notes.txt
+10/09/2018  08:02 AM               602 express-server.js
+10/09/2018  08:47 AM    <DIR>          node_modules     <====
+10/09/2018  08:47 AM            13,748 package-lock.json
+10/09/2018  08:11 AM               371 package.json
+10/08/2018  11:22 AM               457 server.js
+10/08/2018  12:17 PM    <DIR>          static
+02/08/2016  02:41 PM               618 static.js
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+
+# **** Git ****
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>dir
+10/09/2018  08:47 AM    <DIR>          .
+10/09/2018  08:47 AM    <DIR>          ..
+10/09/2018  08:18 AM    <DIR>          .idea
+10/09/2018  08:52 AM             5,588 chapter_4_notes.txt
+10/09/2018  08:02 AM               602 express-server.js
+10/09/2018  08:47 AM    <DIR>          node_modules
+10/09/2018  08:47 AM            13,748 package-lock.json
+10/09/2018  08:11 AM               371 package.json
+10/08/2018  11:22 AM               457 server.js
+10/08/2018  12:17 PM    <DIR>          static
+02/08/2016  02:41 PM               618 static.js
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git init
+Initialized empty Git repository in C:/Users/John/Desktop/WorkingFiles/Chapter 4/.git/
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .idea/
+        chapter_4_notes.txt
+        express-server.js
+        node_modules/
+        package-lock.json
+        package.json
+        server.js
+        static.js
+        static/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+# **** files to ignore by Git ****
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>type .gitignore
+./.idea
+./node_modules
+./package-lock.json
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+
+# ***** GitHub update ****
+download to:
+C:\temp\GitHubDesktopSetup.exe
+
+
+# **** set email address for Git ****
+You can use your GitHub-provided no-reply email address or any email address.
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git config user.email "john.canessa@gmail.com"
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git config user.email
+john.canessa@gmail.com
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+Add the email address to your GitHub account by setting your commit email address on GitHub, 
+so that your commits are attributed to you and appear in your contributions graph.
+
+
+# **** ****
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git add server.js  <====
+warning: LF will be replaced by CRLF in server.js.
+The file will have its original line endings in your working directory.
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   server.js   <====
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .idea/
+        chapter_4_notes.txt
+        express-server.js
+        node_modules/
+        package-lock.json
+        package.json
+        static.js
+        static/
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git add static/    <====
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   server.js
+        new file:   static/favicon.ico  <====
+        new file:   static/index.html   <====
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .idea/
+        chapter_4_notes.txt
+        express-server.js
+        node_modules/
+        package-lock.json
+        package.json
+        static.js
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git add static.js  <====
+warning: LF will be replaced by CRLF in static.js.
+The file will have its original line endings in your working directory.
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   server.js
+        new file:   static.js   <====
+        new file:   static/favicon.ico
+        new file:   static/index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .idea/
+        chapter_4_notes.txt
+        express-server.js
+        node_modules/
+        package-lock.json
+        package.json
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git add package.json   <====
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory.
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   package.json    <====
+        new file:   server.js
+        new file:   static.js
+        new file:   static/favicon.ico
+        new file:   static/index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .idea/
+        chapter_4_notes.txt
+        express-server.js
+        node_modules/
+        package-lock.json
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git add express-server.js  <====
+warning: LF will be replaced by CRLF in express-server.js.
+The file will have its original line endings in your working directory.
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   express-server.js   <====
+        new file:   package.json
+        new file:   server.js
+        new file:   static.js
+        new file:   static/favicon.ico
+        new file:   static/index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .idea/
+        chapter_4_notes.txt
+        node_modules/
+        package-lock.json
+
+C:\Users\John\Desktop\WorkingFiles\Chapter 4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
